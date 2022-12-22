@@ -13,6 +13,7 @@
 	border-radius: 5px;
 	padding: 0.9em 1.8em;
 	opacity: 1;
+	text-decoration: none;
 	&:hover {
 		transition: ease-in-out 0.3s;
 		background-color: #30aaf5;
@@ -52,6 +53,9 @@
 	color: #030a1b;
 	opacity: 0.7;
 }
+.title {
+	@include title;
+}
 
 body {
 	font-family: "Poppins";
@@ -61,7 +65,7 @@ body {
 }
 
 .wrapper {
-	background-color: #e5e5e5;
+	background-color: #E5E5E5;
 }
 .container {
 	max-width: 1150px;
@@ -134,6 +138,7 @@ body {
 	}
 }
 .partners {
+	margin-bottom: 8.7em;
 	&__title {
 		@include title;
 		margin-bottom: 4em;
@@ -147,5 +152,91 @@ body {
 	}
 
 	&__item-img {
+	}
+}
+.properties {
+	margin-bottom: 8.7em;
+	&__headline {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 4em;
+	}
+
+	&__link {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 24px;
+		color: #fe753f;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: repeat( auto-fit, minmax(22.6em, 1fr) );
+		gap: 1.8em;
+	}
+
+	&__content-article {
+		max-width: 22.6em;
+		width: 100%;
+		background: #ffffff;
+		box-shadow: 0px 8px 70px rgba(0, 0, 0, 0.07);
+		border-radius: 10px;
+		padding: 0 30px 30px 30px;
+	}
+
+	&__content-article-img {
+		position: relative;
+		right: 30px;
+		max-height: 20em;
+		max-width: 22.6em;
+		margin-bottom: 1.8em;
+	}
+
+	&__content-article-title {
+		margin-bottom: 0.6em;
+	}
+
+	&__content-article-description {
+		@include subscription;
+		margin-bottom: 1.2em;
+		&::before {
+			content: url(img/location-icon.svg);
+			margin-right: 0.6em;
+		}
+	}
+
+	&__content-article-facilities {
+		display: flex;
+		justify-content: space-between;
+		width: 7.8em;
+		margin-bottom: 1.2em;
+	}
+	&__content-article-facilities-item {
+		display: flex;
+	}
+	&__content-article-facilities-number {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 21px;
+		opacity: 0.9;
+	}
+	&__content-article-bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__content-article-price {
+		font-weight: 600;
+		font-size: 22px;
+		line-height: 33px;
+		color: #fe753f;
+	}
+
+	&__content-article-button {
+		@include button;
 	}
 }

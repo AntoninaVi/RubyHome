@@ -10,22 +10,25 @@
 	line-height: 24px;
 	color: #ffffff;
 	background: #2e6eff;
-	border-radius: 5px;
+	border-radius: 10px;
 	padding: 0.9em 1.8em;
 	opacity: 1;
 	text-decoration: none;
+	border: none;
+	cursor: pointer;
 	&:hover {
 		transition: ease-in-out 0.3s;
 		background-color: #30aaf5;
 	}
 }
-@mixin link {
+@mixin links {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 24px;
 	color: #030a1b;
 	opacity: 0.7;
 	text-decoration: none;
+	cursor: pointer;
 	&:hover {
 		transition: ease-in-out 0.3s;
 		color: #fe753f;
@@ -46,7 +49,7 @@
 		top: 0.1em;
 	}
 }
-@mixin subscription {
+@mixin description {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 24px;
@@ -61,6 +64,14 @@
 }
 .title {
 	@include title;
+}
+.link {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	color: #fe753f;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 
 body {
@@ -79,6 +90,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 2.1em;
+	padding-bottom: 11.8em;
 }
 
 .navigation {
@@ -92,7 +104,7 @@ body {
 	// }
 
 	&__items-item {
-		@include link;
+		@include links;
 		margin-right: 3.1em;
 		&:last-child {
 			@include button;
@@ -121,8 +133,8 @@ body {
 		line-height: 120%;
 	}
 
-	&__content-subscription {
-		@include subscription;
+	&__content-description {
+		@include description;
 		font-size: 18px;
 		line-height: 27px;
 	}
@@ -169,14 +181,14 @@ body {
 		margin-bottom: 4em;
 	}
 
-	&__link {
-		font-weight: 600;
-		font-size: 16px;
-		line-height: 24px;
-		color: #fe753f;
-		text-transform: uppercase;
-		text-decoration: none;
-	}
+	// &__link {
+	// 	font-weight: 600;
+	// 	font-size: 16px;
+	// 	line-height: 24px;
+	// 	color: #fe753f;
+	// 	text-transform: uppercase;
+	// 	text-decoration: none;
+	// }
 
 	&__content {
 		display: grid;
@@ -206,7 +218,7 @@ body {
 	}
 
 	&__content-article-description {
-		@include subscription;
+		@include description;
 		margin-bottom: 1.2em;
 		&::before {
 			content: url(img/location-icon.svg);
@@ -252,8 +264,8 @@ body {
 		margin-bottom: 0.6em;
 	}
 
-	&__subscription {
-		@include subscription;
+	&__description {
+		@include description;
 		max-width: 45.5em;
 		text-align: center;
 		margin-right: auto;
@@ -295,14 +307,11 @@ body {
 	}
 
 	&__content-group-item-title {
-		font-weight: 600;
-		font-size: 22px;
-		line-height: 33px;
-		margin-bottom: 0.6em;
+		@include title-articles;
 	}
 
 	&__content-group-item-description {
-		@include subscription;
+		@include description;
 		width: 19.4em;
 	}
 
@@ -315,5 +324,162 @@ body {
 		max-width: 22.6em;
 		height: 33em;
 		margin-top: 2em;
+	}
+}
+.reviews {
+	margin-bottom: 8.7em;
+
+	&__link {
+	}
+
+	&__title {
+		margin-bottom: 4.3em;
+	}
+
+	&__slider {
+		display: flex;
+	}
+
+	&__slider-card {
+		max-width: 34.8em;
+		padding: 1.8em 1.8em;
+		background: #ffffff;
+		border: 2px solid rgba(254, 117, 63, 0.1);
+		border-radius: 10px;
+		&:first-child {
+			margin-right: 1.8em;
+		}
+	}
+
+	&__slider-card-content {
+		display: flex;
+		align-items: center;
+	}
+
+	&__slider-card-img {
+		margin-right: 1.9em;
+	}
+
+	&__slider-card-text {
+		margin-right: 8.6em;
+	}
+
+	&__slider-card-text-title {
+		@include title-articles;
+		margin-bottom: 5px;
+	}
+
+	&__slider-card-text-description {
+		@include description;
+		text-align: left;
+		max-width: 30.5em;
+	}
+
+	&__slider-card-content-description {
+		@include description;
+		max-width: 30.5em;
+	}
+}
+.email {
+	background-image: url(img/email-bg.png);
+	background-size: cover;
+	border-radius: 10px;
+	text-align: center;
+	padding: 4.3em 0;
+	margin-bottom: 8.7em;
+
+	&__title {
+		font-weight: 500;
+		font-size: 44px;
+		line-height: 60px;
+		text-align: center;
+		color: #ffffff;
+		margin-bottom: 0.9em;
+	}
+
+	&__description {
+		@include description;
+		color: #ffffff;
+		max-width: 39.6em;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 4.3em;
+	}
+
+	&__form {
+		margin-right: auto;
+		margin-left: auto;
+		max-width: 46.4em;
+		width: 100%;
+	}
+
+	&__form-input {
+		max-width: 46.4em;
+		width: 100%;
+		padding: 1.4em 1.8em;
+		border-radius: 10px;
+		border: none;
+	}
+
+	&__form-button {
+		@include button;
+		position: relative;
+		bottom: 3.6em;
+		left: 18.5em;
+	}
+}
+.footer {
+	display: flex;
+	justify-content: space-between;
+
+	&__group {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__description {
+		@include description;
+		max-width: 16.4em;
+		margin-bottom: 1.5em;
+	}
+	&__group-logotype{
+		max-width: 13.7em;
+		width: 100%;
+	}
+
+	&__group-socials {
+		display: flex;
+	}
+
+	&__group-socials-item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0.5em 0.5em;
+		background: #fe753f;
+		border-radius: 15px;
+		width: 1.8em;
+		height: 1.8em;
+		margin-right: 0.9em;
+		&:last-child{
+			margin-right: 0;
+		}
+		&:hover{
+			background-color: #9e3005;
+		}
+	}
+
+	&__group-title {
+		@include title-articles;
+		margin-bottom: 1.5em;
+	}
+
+	&__group-link {
+		@include links;
+		margin-bottom: 0.9em;
+		&:last-child{
+			margin-bottom: 0;
+		}
 	}
 }

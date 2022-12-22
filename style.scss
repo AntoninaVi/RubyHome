@@ -346,9 +346,7 @@ body {
 		background: #ffffff;
 		border: 2px solid rgba(254, 117, 63, 0.1);
 		border-radius: 10px;
-		&:first-child {
-			margin-right: 1.8em;
-		}
+		margin-right: 1.8em;
 	}
 
 	&__slider-card-content {
@@ -443,7 +441,7 @@ body {
 		max-width: 16.4em;
 		margin-bottom: 1.5em;
 	}
-	&__group-logotype{
+	&__group-logotype {
 		max-width: 13.7em;
 		width: 100%;
 	}
@@ -462,10 +460,10 @@ body {
 		width: 1.8em;
 		height: 1.8em;
 		margin-right: 0.9em;
-		&:last-child{
+		&:last-child {
 			margin-right: 0;
 		}
-		&:hover{
+		&:hover {
 			background-color: #9e3005;
 		}
 	}
@@ -478,7 +476,7 @@ body {
 	&__group-link {
 		@include links;
 		margin-bottom: 0.9em;
-		&:last-child{
+		&:last-child {
 			margin-bottom: 0;
 		}
 	}

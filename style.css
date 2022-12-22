@@ -358,8 +358,6 @@ body {
   background: #ffffff;
   border: 2px solid rgba(254, 117, 63, 0.1);
   border-radius: 10px;
-}
-.reviews__slider-card:first-child {
   margin-right: 1.8em;
 }
 .reviews__slider-card-content {

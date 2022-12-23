@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"">
+    <link rel=" stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,10 @@
     <!-- SLIDER -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+
+    <!-- TABS -->
+    <link rel="stylesheet" href="https://cdn.korzh.com/metroui/v4.5.1/css/metro-all.min.css">
+    <script src="https://cdn.korzh.com/metroui/v4/js/metro.min.js"></script>
 
 
 
@@ -46,7 +50,34 @@
                     <img src="img/main-img.png" alt="building" class="main__picture-img">
                 </div>
                 <div class="main__search">
-                    <div class="main__search-tabs"></div>
+                    <div class="main__search-tabs">
+
+                        <div class="main__search-dropdown">
+                            <button onclick="myFunction()" class="main__search-dropdown-btn">Location</button>
+                            <div id="myDropdown" class="main__search-dropdown-items">
+                                <p class="main__search-dropdown-content">Dhaka</p>
+                                <p class="main__search-dropdown-content">Dhaka</p>
+                                <p class="main__search-dropdown-content">Dhaka</p>
+                            </div>
+                        </div>
+                        <!-- <div class="main__search-dropdown">
+                            <button class="main__search-dropdown-btn">Property type</button>
+                            <div class="main__search-dropdown-items">
+                                <p class="main__search-dropdown-content">Dhaka</p>
+                                <p class="main__search-dropdown-content">Dhaka</p>
+                                <p class="main__search-dropdown-content">Dhaka</p>
+                            </div>
+                        </div> -->
+                        <!-- <div class="main__search-dropdown">
+                            <button class="main__search-dropdown-btn">Price</button>
+                            <div class="main__search-dropdown-items">
+                                <p class="main__search-dropdown-content">Dhaka</p>
+                                <p class="main__search-dropdown-content">Dhaka</p>
+                                <p class="main__search-dropdown-content">Dhaka</p>
+                            </div>
+                        </div> -->
+
+                    </div>
                 </div>
             </main>
             <section class="partners">
@@ -436,6 +467,28 @@
             draggable: true,
 
         });
+
+
+        // Dropdown
+        /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.main__search-dropdown-btn')) {
+                var dropdowns = document.getElementsByClassName(".main__search-dropdown-items");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
     </script>
 
 </body>

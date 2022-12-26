@@ -63,95 +63,187 @@
                                 <label for="tab-1">Buy</label>
                                 <div class="tabs__group-tab-content">
                                     <div class="tabs__group-tab-content-dropdowns">
-                                    <!-- DROPDOWNS -->
-                                    <div id="buy">
-                                        <div class="aselect" :data-value="value" :data-list="list">
-                                            <div class="selector box" @click="toggle()">
-                                                <div class="label box">
-                                                    <span class="box">{{ value }}</span>
-                                                </div>
-                                                <div class="arrow box" :class="{ expanded : visible }"></div>
-                                                <div :class="{ hidden : !visible, visible }">
-                                                    <ul>
-                                                        <li :class="{ current : item === value }" v-for="item in list" @click="select(item)">
-                                                            {{ item }}</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="buyTwo">
-                                        <div class="aselect" :data-value="value" :data-list="list">
-                                            <div class="selector box" @click="toggle()">
-                                                <div class="label box">
-                                                    <span class="box">{{ value }}</span>
-                                                </div>
-                                                <div class="arrow box" :class="{ expanded : visible }"></div>
-                                                <div :class="{ hidden : !visible, visible }">
-                                                    <ul>
-                                                        <li :class="{ current : item === value }" v-for="item in list" @click="select(item)">
-                                                            {{ item }}</li>
-                                                    </ul>
+                                        <!-- DROPDOWNS -->
+                                        <div class="tabs__group-tab-content-dropdown" id="buy">
+                                            <div class="aselect" :data-value="value" :data-list="list">
+                                                <div class="selector box" @click="toggle()">
+                                                    <div class="label box">
+                                                        <span class="box">{{ value }}</span>
+                                                    </div>
+                                                    <div class="arrow box" :class="{ expanded : visible }"></div>
+                                                    <div :class="{ hidden : !visible, visible }">
+                                                        <ul>
+                                                            <li :class="{ current : item === value }"
+                                                                v-for="item in list" @click="select(item)">
+                                                                {{ item }}</li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div id="buyThree">
-                                        <div class="aselect" :data-value="value" :data-list="list">
-                                            <div class="selector box" @click="toggle()">
-                                                <div class="label box">
-                                                    <span class="box">{{ value }}</span>
-                                                </div>
-                                                <div class="arrow box" :class="{ expanded : visible }"></div>
-                                                <div :class="{ hidden : !visible, visible }">
-                                                    <ul>
-                                                        <li :class="{ current : item === value }" v-for="item in list" @click="select(item)">
-                                                            {{ item }}</li>
-                                                    </ul>
+                                        <div class="tabs__group-tab-content-dropdown" id="buyTwo">
+                                            <div class="aselect" :data-value="value" :data-list="list">
+                                                <div class="selector box" @click="toggle()">
+                                                    <div class="label box">
+                                                        <span class="box">{{ value }}</span>
+                                                    </div>
+                                                    <div class="arrow box" :class="{ expanded : visible }"></div>
+                                                    <div :class="{ hidden : !visible, visible }">
+                                                        <ul>
+                                                            <li :class="{ current : item === value }"
+                                                                v-for="item in list" @click="select(item)">
+                                                                {{ item }}</li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="tabs__group-tab-content-dropdown" id="buyThree">
+                                            <div class="aselect" :data-value="value" :data-list="list">
+                                                <div class="selector box" @click="toggle()">
+                                                    <div class="label box">
+                                                        <span class="box">{{ value }}</span>
+                                                    </div>
+                                                    <div class="arrow box" :class="{ expanded : visible }"></div>
+                                                    <div :class="{ hidden : !visible, visible }">
+                                                        <ul>
+                                                            <li :class="{ current : item === value }"
+                                                                v-for="item in list" @click="select(item)">
+                                                                {{ item }}</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="tabs__group-tab-content-dropdowns-btn">Search</button>
                                     </div>
-                                    <button class="tabs__group-tab-content-dropdowns-btn">Search</button>
-
-
-                                    </div>
-
                                 </div>
                             </div>
+
                             <div class="tabs__group-tab">
                                 <input type="radio" id="tab-2" name="tabs__group-tab" checked>
                                 <label for="tab-2">Sell</label>
                                 <div class="tabs__group-tab-content">
-
-                                    <p>purr</p>
+                                    <div class="tabs__group-tab-content-dropdowns">
+                                        <!-- DROPDOWNS -->
+                                        <div class="tabs__group-tab-content-dropdown" id="sell">
+                                            <div class="aselect" :data-value="value" :data-list="list">
+                                                <div class="selector box" @click="toggle()">
+                                                    <div class="label box">
+                                                        <span class="box">{{ value }}</span>
+                                                    </div>
+                                                    <div class="arrow box" :class="{ expanded : visible }"></div>
+                                                    <div :class="{ hidden : !visible, visible }">
+                                                        <ul>
+                                                            <li :class="{ current : item === value }"
+                                                                v-for="item in list" @click="select(item)">
+                                                                {{ item }}</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__group-tab-content-dropdown" id="sellTwo">
+                                            <div class="aselect" :data-value="value" :data-list="list">
+                                                <div class="selector box" @click="toggle()">
+                                                    <div class="label box">
+                                                        <span class="box">{{ value }}</span>
+                                                    </div>
+                                                    <div class="arrow box" :class="{ expanded : visible }"></div>
+                                                    <div :class="{ hidden : !visible, visible }">
+                                                        <ul>
+                                                            <li :class="{ current : item === value }"
+                                                                v-for="item in list" @click="select(item)">
+                                                                {{ item }}</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__group-tab-content-dropdown" id="sellThree">
+                                            <div class="aselect" :data-value="value" :data-list="list">
+                                                <div class="selector box" @click="toggle()">
+                                                    <div class="label box">
+                                                        <span class="box">{{ value }}</span>
+                                                    </div>
+                                                    <div class="arrow box" :class="{ expanded : visible }"></div>
+                                                    <div :class="{ hidden : !visible, visible }">
+                                                        <ul>
+                                                            <li :class="{ current : item === value }"
+                                                                v-for="item in list" @click="select(item)">
+                                                                {{ item }}</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="tabs__group-tab-content-dropdowns-btn">Search</button>
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="tabs__group-tab">
                                 <input type="radio" id="tab-3" name="tabs__group-tab" checked>
                                 <label for="tab-3">Rent</label>
                                 <div class="tabs__group-tab-content">
-
-                                    <p>P</p>
+                                    <div class="tabs__group-tab-content-dropdowns">
+                                        <!-- DROPDOWNS -->
+                                        <div class="tabs__group-tab-content-dropdown" id="rent">
+                                            <div class="aselect" :data-value="value" :data-list="list">
+                                                <div class="selector box" @click="toggle()">
+                                                    <div class="label box">
+                                                        <span class="box">{{ value }}</span>
+                                                    </div>
+                                                    <div class="arrow box" :class="{ expanded : visible }"></div>
+                                                    <div :class="{ hidden : !visible, visible }">
+                                                        <ul>
+                                                            <li :class="{ current : item === value }"
+                                                                v-for="item in list" @click="select(item)">
+                                                                {{ item }}</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__group-tab-content-dropdown" id="rentTwo">
+                                            <div class="aselect" :data-value="value" :data-list="list">
+                                                <div class="selector box" @click="toggle()">
+                                                    <div class="label box">
+                                                        <span class="box">{{ value }}</span>
+                                                    </div>
+                                                    <div class="arrow box" :class="{ expanded : visible }"></div>
+                                                    <div :class="{ hidden : !visible, visible }">
+                                                        <ul>
+                                                            <li :class="{ current : item === value }"
+                                                                v-for="item in list" @click="select(item)">
+                                                                {{ item }}</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__group-tab-content-dropdown" id="rentThree">
+                                            <div class="aselect" :data-value="value" :data-list="list">
+                                                <div class="selector box" @click="toggle()">
+                                                    <div class="label box">
+                                                        <span class="box">{{ value }}</span>
+                                                    </div>
+                                                    <div class="arrow box" :class="{ expanded : visible }"></div>
+                                                    <div :class="{ hidden : !visible, visible }">
+                                                        <ul>
+                                                            <li :class="{ current : item === value }"
+                                                                v-for="item in list" @click="select(item)">
+                                                                {{ item }}</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="tabs__group-tab-content-dropdowns-btn">Search</button>
+                                    </div>
                                 </div>
                             </div>
-
-
-
                         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
                     </div>
                 </div>
             </main>
@@ -668,9 +760,185 @@
                 window.removeEventListener('click', this.handleClick);
             },
         })
-        
+
         const buyThree = new Vue({
             el: "#buyThree",
+            name: 'aselect',
+            data: {
+                value: 'Location',
+                list: ["Dhaka", "Kuala-Lumpur", "Jakarta", "Hanoi", "Dubai"],
+                visible: false
+            },
+            methods: {
+                toggle() {
+                    this.visible = !this.visible;
+                },
+                select(option) {
+                    this.value = option;
+                },
+                handleClick(e) {
+                    const classname = e.target.className;
+                    if (this.visible && !classname.includes("box")) {
+                        this.visible = false;
+                    }
+                }
+            },
+            created() {
+                window.addEventListener('click', this.handleClick);
+            },
+            destroyed() {
+                window.removeEventListener('click', this.handleClick);
+            },
+        })
+        // Dropdowns SELL
+        const sell = new Vue({
+            el: "#sell",
+            name: 'aselect',
+            data: {
+                value: 'Location',
+                list: ["Dhaka", "Kuala-Lumpur", "Jakarta", "Hanoi", "Dubai"],
+                visible: false
+            },
+            methods: {
+                toggle() {
+                    this.visible = !this.visible;
+                },
+                select(option) {
+                    this.value = option;
+                },
+                handleClick(e) {
+                    const classname = e.target.className;
+                    if (this.visible && !classname.includes("box")) {
+                        this.visible = false;
+                    }
+                }
+            },
+            created() {
+                window.addEventListener('click', this.handleClick);
+            },
+            destroyed() {
+                window.removeEventListener('click', this.handleClick);
+            },
+        })
+        const sellTwo = new Vue({
+            el: "#sellTwo",
+            name: 'aselect',
+            data: {
+                value: 'Location',
+                list: ["Dhaka", "Kuala-Lumpur", "Jakarta", "Hanoi", "Dubai"],
+                visible: false
+            },
+            methods: {
+                toggle() {
+                    this.visible = !this.visible;
+                },
+                select(option) {
+                    this.value = option;
+                },
+                handleClick(e) {
+                    const classname = e.target.className;
+                    if (this.visible && !classname.includes("box")) {
+                        this.visible = false;
+                    }
+                }
+            },
+            created() {
+                window.addEventListener('click', this.handleClick);
+            },
+            destroyed() {
+                window.removeEventListener('click', this.handleClick);
+            },
+        })
+        const sellThree = new Vue({
+            el: "#sellThree",
+            name: 'aselect',
+            data: {
+                value: 'Location',
+                list: ["Dhaka", "Kuala-Lumpur", "Jakarta", "Hanoi", "Dubai"],
+                visible: false
+            },
+            methods: {
+                toggle() {
+                    this.visible = !this.visible;
+                },
+                select(option) {
+                    this.value = option;
+                },
+                handleClick(e) {
+                    const classname = e.target.className;
+                    if (this.visible && !classname.includes("box")) {
+                        this.visible = false;
+                    }
+                }
+            },
+            created() {
+                window.addEventListener('click', this.handleClick);
+            },
+            destroyed() {
+                window.removeEventListener('click', this.handleClick);
+            },
+        })         
+           // Dropdowns RENT
+           const rent = new Vue({
+            el: "#rent",
+            name: 'aselect',
+            data: {
+                value: 'Location',
+                list: ["Dhaka", "Kuala-Lumpur", "Jakarta", "Hanoi", "Dubai"],
+                visible: false
+            },
+            methods: {
+                toggle() {
+                    this.visible = !this.visible;
+                },
+                select(option) {
+                    this.value = option;
+                },
+                handleClick(e) {
+                    const classname = e.target.className;
+                    if (this.visible && !classname.includes("box")) {
+                        this.visible = false;
+                    }
+                }
+            },
+            created() {
+                window.addEventListener('click', this.handleClick);
+            },
+            destroyed() {
+                window.removeEventListener('click', this.handleClick);
+            },
+        })
+        const rentTwo = new Vue({
+            el: "#rentTwo",
+            name: 'aselect',
+            data: {
+                value: 'Location',
+                list: ["Dhaka", "Kuala-Lumpur", "Jakarta", "Hanoi", "Dubai"],
+                visible: false
+            },
+            methods: {
+                toggle() {
+                    this.visible = !this.visible;
+                },
+                select(option) {
+                    this.value = option;
+                },
+                handleClick(e) {
+                    const classname = e.target.className;
+                    if (this.visible && !classname.includes("box")) {
+                        this.visible = false;
+                    }
+                }
+            },
+            created() {
+                window.addEventListener('click', this.handleClick);
+            },
+            destroyed() {
+                window.removeEventListener('click', this.handleClick);
+            },
+        })
+        const rentThree = new Vue({
+            el: "#rentThree",
             name: 'aselect',
             data: {
                 value: 'Location',

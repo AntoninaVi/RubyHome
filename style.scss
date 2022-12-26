@@ -124,7 +124,7 @@ body {
 }
 
 .main {
-	margin-bottom: -20em;
+	margin-bottom: -10em;
 	&__content-text {
 		max-width: 34.8em;
 		margin-right: 6.5em;
@@ -308,13 +308,12 @@ body {
 
 	&__content-picture {
 		position: relative;
-		top: 8.3em;
+		top: 7em;
 	}
 
 	&__content-picture-img {
 		max-width: 22.6em;
 		height: 33em;
-		margin-top: 2em;
 	}
 }
 .reviews {
@@ -475,10 +474,8 @@ body {
 		display: flex;
 		position: relative;
 		bottom: 35em;
-		min-height: 11.3em;
 		width: 52.6em;
 		border-radius: 8px 8px 0 0;
-		border-radius: 5px;
 	}
 
 	&__group-tab {
@@ -493,7 +490,6 @@ body {
 		top: 2.5em;
 		padding: 1.8em;
 		border-radius: 0 5px 5px 5px;
-		
 		background: #ffffff;
 		transition: ease, transform 0.8s ease;
 		opacity: 0;
@@ -504,12 +500,13 @@ body {
 	}
 	&__group-tab-content-dropdowns {
 		display: grid;
-		grid-template-columns: 25% 25% 25% 20%;
-		align-items: baseline;
+		grid-template-columns: 23% 28% 31% 18%;
+		align-items: center;
 	}
 	&__group-tab-content-dropdowns-btn {
 		@include button;
 		padding: 0.9em 1.2em;
+		vertical-align: sub;
 
 		&:before {
 			content: url(img/search-icon.svg);
@@ -530,13 +527,17 @@ body {
 		}
 	}
 	&__group-tab-content-dropdown {
-		&:nth-child(1) {
-			border-right: 1px solid #030a1b;
-			margin-right: 2em;
+		&:nth-child(2) {
+			padding-bottom: -20px;
+			padding-left: 20px;
+			border-left: 1px solid #030a1b;
 		}
 		&:nth-child(2) {
 			border-right: 1px solid #030a1b;
-			margin-right: 2em;
+			padding-left: 2em;
+		}
+		&:nth-child(3) {
+			padding-left: 1em;
 		}
 	}
 }
@@ -550,9 +551,9 @@ body {
 	text-align: center;
 	background: #ffffff;
 	cursor: pointer;
-	&:nth-child(1) {
-		border-top-left-radius: 5px;
-	}
+}
+.tabs__group-tab:nth-child(1) label {
+	border-top-left-radius: 5px;
 }
 .tabs__group-tab:nth-child(3) label {
 	border-top-right-radius: 5px;

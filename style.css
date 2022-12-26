@@ -100,7 +100,7 @@ body {
 }
 
 .main {
-  margin-bottom: -20em;
+  margin-bottom: -10em;
 }
 .main__content-text {
   max-width: 34.8em;
@@ -337,12 +337,11 @@ body {
 }
 .features__content-picture {
   position: relative;
-  top: 8.3em;
+  top: 7em;
 }
 .features__content-picture-img {
   max-width: 22.6em;
   height: 33em;
-  margin-top: 2em;
 }
 
 .reviews {
@@ -557,10 +556,8 @@ body {
   display: flex;
   position: relative;
   bottom: 35em;
-  min-height: 11.3em;
   width: 52.6em;
   border-radius: 8px 8px 0 0;
-  border-radius: 5px;
 }
 .tabs__group-tab {
   border-radius: 5px;
@@ -587,11 +584,11 @@ body {
 .tabs__group-tab-content-dropdowns {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 25% 25% 25% 20%;
-  grid-template-columns: 25% 25% 25% 20%;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-grid-columns: 23% 28% 31% 18%;
+  grid-template-columns: 23% 28% 31% 18%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .tabs__group-tab-content-dropdowns-btn {
   font-weight: 500;
@@ -606,6 +603,7 @@ body {
   border: none;
   cursor: pointer;
   padding: 0.9em 1.2em;
+  vertical-align: sub;
 }
 .tabs__group-tab-content-dropdowns-btn:hover {
   -webkit-transition: ease-in-out 0.3s;
@@ -629,13 +627,17 @@ body {
   content: url(img/arrow-bottom.svg);
   margin-left: 0.6em;
 }
-.tabs__group-tab-content-dropdown:nth-child(1) {
-  border-right: 1px solid #030a1b;
-  margin-right: 2em;
+.tabs__group-tab-content-dropdown:nth-child(2) {
+  padding-bottom: -20px;
+  padding-left: 20px;
+  border-left: 1px solid #030a1b;
 }
 .tabs__group-tab-content-dropdown:nth-child(2) {
   border-right: 1px solid #030a1b;
-  margin-right: 2em;
+  padding-left: 2em;
+}
+.tabs__group-tab-content-dropdown:nth-child(3) {
+  padding-left: 1em;
 }
 
 .tabs__group-tab label {
@@ -648,7 +650,8 @@ body {
   background: #ffffff;
   cursor: pointer;
 }
-.tabs__group-tab label:nth-child(1) {
+
+.tabs__group-tab:nth-child(1) label {
   border-top-left-radius: 5px;
 }
 

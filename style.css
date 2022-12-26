@@ -128,24 +128,7 @@ body {
   max-height: 38.4em;
   border-radius: 10px;
 }
-.main__search-dropdown-btn {
-  background-color: #3498db;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-.main__search-dropdown-items {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
+
 .show {
   display: block;
 }
@@ -613,7 +596,6 @@ body {
   min-height: 11.3em;
   width: 52.6em;
   border-radius: 8px 8px 0 0;
-  overflow: hidden;
 }
 .tabs__group-tab {
   -webkit-box-flex: 1;
@@ -629,7 +611,7 @@ body {
   top: 40px;
   padding: 20px;
   border-radius: 0 0 8px 8px;
-  background: #afaeb1;
+  background: #ffffff;
   -webkit-transition: opacity 0.8s ease, -webkit-transform 0.8s ease;
   transition: opacity 0.8s ease, -webkit-transform 0.8s ease;
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -643,19 +625,42 @@ body {
   width: 100%;
   max-width: 52.6em;
 }
+.tabs__group-tab-content-dropdowns {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 25% 25% 20%;
+  grid-template-columns: 25% 25% 25% 20%;
+}
+.tabs__group-tab-content-dropdowns-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  background: #2e6eff;
+  border-radius: 10px;
+  padding: 0.9em 1.8em;
+  opacity: 1;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.tabs__group-tab-content-dropdowns-btn:hover {
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+  background-color: #30aaf5;
+}
 
 .tabs__group-tab label {
   display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  /* tab content must clear this */
   height: 40px;
   padding: 10px;
   text-align: center;
-  background: #e8e6eb;
+  background: #ffffff;
   cursor: pointer;
-  -webkit-transition: background 0.5s ease;
-  transition: background 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .tabs__group-tab label:hover {
@@ -664,13 +669,13 @@ body {
 
 .aselect {
   width: 280px;
-  margin: 20px auto;
 }
 .aselect .selector {
-  border: 1px solid gainsboro;
-  background: #f8f8f8;
+  border: none;
+  background: #ffffff;
   position: relative;
   z-index: 1;
+  width: 60%;
 }
 .aselect .selector .arrow {
   position: absolute;
@@ -678,9 +683,6 @@ body {
   top: 40%;
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 10px solid #888;
   -webkit-transform: rotateZ(0deg) translateY(0px);
           transform: rotateZ(0deg) translateY(0px);
   -webkit-transition-duration: 0.3s;
@@ -704,21 +706,19 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
-  border: 1px solid gainsboro;
   position: absolute;
   z-index: 1;
   background: #fff;
 }
 .aselect li {
   padding: 12px;
-  color: #666;
 }
 .aselect li:hover {
-  color: white;
-  background: seagreen;
+  color: #fe753f;
 }
 .aselect .current {
-  background: #eaeaea;
+  background: #ffffff;
+  color: #fe753f;
 }
 .aselect .hidden {
   visibility: hidden;

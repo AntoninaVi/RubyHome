@@ -508,7 +508,8 @@ body {
 	display: none;
 }
 [type="radio"]:checked ~ label {
-	background: #e5ddf0;
+	background: #ffffff;
+	color: #fe753f;
 	z-index: 2;
 }
 
@@ -547,10 +548,17 @@ body {
 		min-height: 11.3em;
 		width: 52.6em;
 		border-radius: 8px 8px 0 0;
+		border-radius: 5px;
 	}
 
 	&__group-tab {
-		flex: 1;
+		border-radius: 5px;
+		&:hover {
+			color: #2045db;
+		}
+		&:checked {
+			color: #fe753f;
+		}
 	}
 	&__group-tab-content {
 		position: absolute;
@@ -574,7 +582,7 @@ body {
 		display: grid;
 		grid-template-columns: 25% 25% 25% 20%;
 	}
-	&__group-tab-content-dropdowns-btn{
+	&__group-tab-content-dropdowns-btn {
 		@include button;
 	}
 }
@@ -588,10 +596,6 @@ body {
 	background: #ffffff;
 	cursor: pointer;
 	transition: 0.5s ease;
-}
-
-.tabs__group-tab label:hover {
-	background: #f1eff3;
 }
 
 .aselect {

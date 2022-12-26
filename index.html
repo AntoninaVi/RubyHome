@@ -55,8 +55,6 @@
                 </div>
                 <div class="main__search">
                     <div class="main__search-tabs">
-
-
                         <div class="tabs__group">
                             <div class="tabs__group-tab">
                                 <input type="radio" id="tab-1" name="tabs__group-tab" checked>
@@ -64,7 +62,10 @@
                                 <div class="tabs__group-tab-content">
                                     <div class="tabs__group-tab-content-dropdowns">
                                         <!-- DROPDOWNS -->
+
                                         <div class="tabs__group-tab-content-dropdown" id="buy">
+                                            <h5 id="buyTitle" class="tabs__group-tab-content-dropdowns-title">Location
+                                            </h5>
                                             <div class="aselect" :data-value="value" :data-list="list">
                                                 <div class="selector box" @click="toggle()">
                                                     <div class="label box">
@@ -82,6 +83,7 @@
                                             </div>
                                         </div>
                                         <div class="tabs__group-tab-content-dropdown" id="buyTwo">
+                                            <h5 class="tabs__group-tab-content-dropdowns-title">Property type</h5>
                                             <div class="aselect" :data-value="value" :data-list="list">
                                                 <div class="selector box" @click="toggle()">
                                                     <div class="label box">
@@ -99,6 +101,7 @@
                                             </div>
                                         </div>
                                         <div class="tabs__group-tab-content-dropdown" id="buyThree">
+                                            <h5 class="tabs__group-tab-content-dropdowns-title">Price</h5>
                                             <div class="aselect" :data-value="value" :data-list="list">
                                                 <div class="selector box" @click="toggle()">
                                                     <div class="label box">
@@ -127,6 +130,7 @@
                                     <div class="tabs__group-tab-content-dropdowns">
                                         <!-- DROPDOWNS -->
                                         <div class="tabs__group-tab-content-dropdown" id="sell">
+                                            <h5 class="tabs__group-tab-content-dropdowns-title">Location</h5>
                                             <div class="aselect" :data-value="value" :data-list="list">
                                                 <div class="selector box" @click="toggle()">
                                                     <div class="label box">
@@ -144,6 +148,7 @@
                                             </div>
                                         </div>
                                         <div class="tabs__group-tab-content-dropdown" id="sellTwo">
+                                            <h5 class="tabs__group-tab-content-dropdowns-title">Property type</h5>
                                             <div class="aselect" :data-value="value" :data-list="list">
                                                 <div class="selector box" @click="toggle()">
                                                     <div class="label box">
@@ -161,6 +166,7 @@
                                             </div>
                                         </div>
                                         <div class="tabs__group-tab-content-dropdown" id="sellThree">
+                                            <h5 class="tabs__group-tab-content-dropdowns-title">Price</h5>
                                             <div class="aselect" :data-value="value" :data-list="list">
                                                 <div class="selector box" @click="toggle()">
                                                     <div class="label box">
@@ -189,6 +195,7 @@
                                     <div class="tabs__group-tab-content-dropdowns">
                                         <!-- DROPDOWNS -->
                                         <div class="tabs__group-tab-content-dropdown" id="rent">
+                                            <h5 class="tabs__group-tab-content-dropdowns-title">Location</h5>
                                             <div class="aselect" :data-value="value" :data-list="list">
                                                 <div class="selector box" @click="toggle()">
                                                     <div class="label box">
@@ -206,6 +213,7 @@
                                             </div>
                                         </div>
                                         <div class="tabs__group-tab-content-dropdown" id="rentTwo">
+                                            <h5 class="tabs__group-tab-content-dropdowns-title">Property type</h5>
                                             <div class="aselect" :data-value="value" :data-list="list">
                                                 <div class="selector box" @click="toggle()">
                                                     <div class="label box">
@@ -223,6 +231,7 @@
                                             </div>
                                         </div>
                                         <div class="tabs__group-tab-content-dropdown" id="rentThree">
+                                            <h5 class="tabs__group-tab-content-dropdowns-title">Price</h5>
                                             <div class="aselect" :data-value="value" :data-list="list">
                                                 <div class="selector box" @click="toggle()">
                                                     <div class="label box">
@@ -486,6 +495,7 @@
                                 money.Been there. Done that. Sold. Bought
                                 Bringing It All Together.</p>
                         </article>
+
                         <article class="reviews__slider-card">
                             <div class="reviews__slider-card-content">
                                 <img src="img/photo-1.png" alt="photo" class="reviews__slider-card-img">
@@ -503,9 +513,9 @@
                         </article>
                         <article class="reviews__slider-card">
                             <div class="reviews__slider-card-content">
-                                <img src="img/photo-1.png" alt="photo" class="reviews__slider-card-img">
+                                <img src="img/photo-2.png" alt="photo" class="reviews__slider-card-img">
                                 <div class="reviews__slider-card-text">
-                                    <h3 class="reviews__slider-card-text-title">Justin Lee</h3>
+                                    <h3 class="reviews__slider-card-text-title">Angel Cathe</h3>
                                     <p class="reviews__slider-card-text-description">Products Designer at Ito</p>
                                 </div>
                                 <img src="img/left-quote.svg" alt="quote">
@@ -516,7 +526,7 @@
                                 money.Been there. Done that. Sold. Bought
                                 Bringing It All Together.</p>
                         </article>
-                        <!-- <article class="reviews__slider-card">
+                        <article class="reviews__slider-card">
                             <div class="reviews__slider-card-content">
                                 <img src="img/photo-2.png" alt="photo" class="reviews__slider-card-img">
                                 <div class="reviews__slider-card-text">
@@ -530,37 +540,8 @@
                                 once the closing IN signed.Buying a bigger home doesn’t necessarily mean spendi more
                                 money.Been there. Done that. Sold. Bought
                                 Bringing It All Together.</p>
-                        </article> -->
-                        <!-- <article class="reviews__slider-card">
-                            <div class="reviews__slider-card-content">
-                                <img src="img/photo-2.png" alt="photo" class="reviews__slider-card-img">
-                                <div class="reviews__slider-card-text">
-                                    <h3 class="reviews__slider-card-text-title">Angel Cathe</h3>
-                                    <p class="reviews__slider-card-text-description">Products Designer at Ito</p>
-                                </div>
-                                <img src="img/left-quote.svg" alt="quote">
-                            </div>
-                            <p class="reviews__slider-card-content-description">A good real estate agent doesn’t
-                                disappear
-                                once the closing IN signed.Buying a bigger home doesn’t necessarily mean spendi more
-                                money.Been there. Done that. Sold. Bought
-                                Bringing It All Together.</p>
-                        </article> -->
-                        <!-- <article class="reviews__slider-card">
-                            <div class="reviews__slider-card-content">
-                                <img src="img/photo-2.png" alt="photo" class="reviews__slider-card-img">
-                                <div class="reviews__slider-card-text">
-                                    <h3 class="reviews__slider-card-text-title">Angel Cathe</h3>
-                                    <p class="reviews__slider-card-text-description">Products Designer at Ito</p>
-                                </div>
-                                <img src="img/left-quote.svg" alt="quote">
-                            </div>
-                            <p class="reviews__slider-card-content-description">A good real estate agent doesn’t
-                                disappear
-                                once the closing IN signed.Buying a bigger home doesn’t necessarily mean spendi more
-                                money.Been there. Done that. Sold. Bought
-                                Bringing It All Together.</p>
-                        </article> -->
+                        </article>
+
 
                     </div>
                     <div role="tablist" class="dots"></div>
@@ -634,7 +615,7 @@
 
     <script>
         new Glider(document.getElementById('glider'), {
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1,
             dots: '.dots',
             draggable: true,
@@ -642,70 +623,12 @@
         });
 
 
-        // Dropdown
-
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-
-        window.onclick = function (event) {
-            if (!event.target.matches('.main__search-dropdown-btn')) {
-                var dropdowns = document.getElementsByClassName(".main__search-dropdown-items");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-        function myFunction2() {
-            document.getElementById("myDropdown2").classList.toggle("show");
-        }
-
-
-        window.onclick = function (event) {
-            if (!event.target.matches('.main__search-dropdown-btn')) {
-                var dropdowns = document.getElementsByClassName(".main__search-dropdown-items");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-
-        function myFunction3() {
-            document.getElementById("myDropdown3").classList.toggle("show");
-        }
-
-
-        window.onclick = function (event) {
-            if (!event.target.matches('.main__search-dropdown-btn')) {
-                var dropdowns = document.getElementsByClassName(".main__search-dropdown-items");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-
-
-
-
         // Dropdowns Buy
         const buy = new Vue({
             el: "#buy",
             name: 'aselect',
             data: {
-                value: 'Location',
+                value: 'Dhaka',
                 list: ["Dhaka", "Kuala-Lumpur", "Jakarta", "Hanoi", "Dubai"],
                 visible: false
             },
@@ -735,8 +658,8 @@
             el: "#buyTwo",
             name: 'aselect',
             data: {
-                value: 'Location',
-                list: ["Dhaka", "Kuala-Lumpur", "Jakarta", "Hanoi", "Dubai"],
+                value: 'Duplex',
+                list: ["Duplex", "Townhouse", "Apartment", "Condominium", "Penthouse"],
                 visible: false
             },
             methods: {
@@ -765,8 +688,8 @@
             el: "#buyThree",
             name: 'aselect',
             data: {
-                value: 'Location',
-                list: ["Dhaka", "Kuala-Lumpur", "Jakarta", "Hanoi", "Dubai"],
+                value: '$4000-$8000',
+                list: ["$1000-$2000", "$2000-$4000", "$4000-$8000", "$8000-$10000", "$10000+"],
                 visible: false
             },
             methods: {
@@ -795,7 +718,7 @@
             el: "#sell",
             name: 'aselect',
             data: {
-                value: 'Location',
+                value: 'Dhaka',
                 list: ["Dhaka", "Kuala-Lumpur", "Jakarta", "Hanoi", "Dubai"],
                 visible: false
             },
@@ -824,8 +747,8 @@
             el: "#sellTwo",
             name: 'aselect',
             data: {
-                value: 'Location',
-                list: ["Dhaka", "Kuala-Lumpur", "Jakarta", "Hanoi", "Dubai"],
+                value: 'Duplex',
+                list: ["Duplex", "Townhouse", "Apartment", "Condominium", "Penthouse"],
                 visible: false
             },
             methods: {
@@ -853,8 +776,8 @@
             el: "#sellThree",
             name: 'aselect',
             data: {
-                value: 'Location',
-                list: ["Dhaka", "Kuala-Lumpur", "Jakarta", "Hanoi", "Dubai"],
+                value: '$4000-$8000',
+                list: ["$1000-$2000", "$2000-$4000", "$4000-$8000", "$8000-$10000", "$10000+"],
                 visible: false
             },
             methods: {
@@ -877,13 +800,13 @@
             destroyed() {
                 window.removeEventListener('click', this.handleClick);
             },
-        })         
-           // Dropdowns RENT
-           const rent = new Vue({
+        })
+        // Dropdowns RENT
+        const rent = new Vue({
             el: "#rent",
             name: 'aselect',
             data: {
-                value: 'Location',
+                value: 'Dhaka',
                 list: ["Dhaka", "Kuala-Lumpur", "Jakarta", "Hanoi", "Dubai"],
                 visible: false
             },
@@ -912,8 +835,8 @@
             el: "#rentTwo",
             name: 'aselect',
             data: {
-                value: 'Location',
-                list: ["Dhaka", "Kuala-Lumpur", "Jakarta", "Hanoi", "Dubai"],
+                value: 'Duplex',
+                list: ["Duplex", "Townhouse", "Apartment", "Condominium", "Penthouse"],
                 visible: false
             },
             methods: {
@@ -941,8 +864,8 @@
             el: "#rentThree",
             name: 'aselect',
             data: {
-                value: 'Location',
-                list: ["Dhaka", "Kuala-Lumpur", "Jakarta", "Hanoi", "Dubai"],
+                value: '$4000-$8000',
+                list: ["$1000-$2000", "$2000-$4000", "$4000-$8000", "$8000-$10000", "$10000+"],
                 visible: false
             },
             methods: {

@@ -10,13 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
+    <script src="vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8"></script>
+
+
     <!-- SLIDER -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 
-    <!-- TABS -->
+    <!-- TABS
     <link rel="stylesheet" href="https://cdn.korzh.com/metroui/v4.5.1/css/metro-all.min.css">
-    <script src="https://cdn.korzh.com/metroui/v4/js/metro.min.js"></script>
+    <script src="https://cdn.korzh.com/metroui/v4/js/metro.min.js"></script> -->
 
 
 
@@ -52,34 +56,80 @@
                 <div class="main__search">
                     <div class="main__search-tabs">
 
-                        <div class="main__search-dropdown">
-                            <button onclick="myFunction()" class="main__search-dropdown-btn">Location</button>
-                            <div id="myDropdown" class="main__search-dropdown-items">
-                                <p class="main__search-dropdown-content">Dhaka</p>
-                                <p class="main__search-dropdown-content">Dhaka</p>
-                                <p class="main__search-dropdown-content">Dhaka</p>
+
+                        <div class="tabs__group">
+                            <div class="tabs__group-tab">
+                                <input type="radio" id="tab-1" name="tabs__group-tab" checked>
+                                <label for="tab-1">Buy</label>
+                                <div class="tabs__group-tab-content">
+                                    <div class="tabs__group-tab-content-dropdowns">
+                                    <!-- DROPDOWNS -->
+                                    <div id="app">
+
+                                        <div class="aselect" :data-value="value" :data-list="list">
+                                            <div class="selector box" @click="toggle()">
+                                                <div class="label box">
+                                                    <span class="box">{{ value }}</span>
+                                                </div>
+                                                <div class="arrow box" :class="{ expanded : visible }"></div>
+                                                <div :class="{ hidden : !visible, visible }">
+                                                    <ul>
+                                                        <li :class="{ current : item === value }" v-for="item in list" @click="select(item)">
+                                                            {{ item }}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    </div>
+
+                                </div>
                             </div>
+                            <div class="tabs__group-tab">
+                                <input type="radio" id="tab-2" name="tabs__group-tab" checked>
+                                <label for="tab-2">Sell</label>
+                                <div class="tabs__group-tab-content">
+
+                                    <p>purr</p>
+                                </div>
+                            </div>
+                            <div class="tabs__group-tab">
+                                <input type="radio" id="tab-3" name="tabs__group-tab" checked>
+                                <label for="tab-3">Rent</label>
+                                <div class="tabs__group-tab-content">
+
+                                    <p>P</p>
+                                </div>
+                            </div>
+
+
+
                         </div>
-                        <!-- <div class="main__search-dropdown">
-                            <button class="main__search-dropdown-btn">Property type</button>
-                            <div class="main__search-dropdown-items">
-                                <p class="main__search-dropdown-content">Dhaka</p>
-                                <p class="main__search-dropdown-content">Dhaka</p>
-                                <p class="main__search-dropdown-content">Dhaka</p>
-                            </div>
-                        </div> -->
-                        <!-- <div class="main__search-dropdown">
-                            <button class="main__search-dropdown-btn">Price</button>
-                            <div class="main__search-dropdown-items">
-                                <p class="main__search-dropdown-content">Dhaka</p>
-                                <p class="main__search-dropdown-content">Dhaka</p>
-                                <p class="main__search-dropdown-content">Dhaka</p>
-                            </div>
-                        </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
 
                     </div>
                 </div>
             </main>
+
+
+
+
+
+
             <section class="partners">
                 <h2 class="title partners__title">Our Partners</h2>
                 <div class="partners__items">
@@ -470,13 +520,12 @@
 
 
         // Dropdown
-        /* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
+
         function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
         }
 
-        // Close the dropdown if the user clicks outside of it
+
         window.onclick = function (event) {
             if (!event.target.matches('.main__search-dropdown-btn')) {
                 var dropdowns = document.getElementsByClassName(".main__search-dropdown-items");
@@ -489,7 +538,79 @@ toggle between hiding and showing the dropdown content */
                 }
             }
         }
+        function myFunction2() {
+            document.getElementById("myDropdown2").classList.toggle("show");
+        }
+
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.main__search-dropdown-btn')) {
+                var dropdowns = document.getElementsByClassName(".main__search-dropdown-items");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        function myFunction3() {
+            document.getElementById("myDropdown3").classList.toggle("show");
+        }
+
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.main__search-dropdown-btn')) {
+                var dropdowns = document.getElementsByClassName(".main__search-dropdown-items");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+
+
+
+        // VUE
+        const app = new Vue({
+            el: "#app",
+            name: 'aselect',
+            data: {
+                value: 'Location',
+                list: ["Dhaka", "Kuala-Lumpur", "Jakarta", "Hanoi", "Dubai"],
+                visible: false
+            },
+            methods: {
+                toggle() {
+                    this.visible = !this.visible;
+                },
+                select(option) {
+                    this.value = option;
+                },
+                handleClick(e) {
+                    const classname = e.target.className;
+                    if (this.visible && !classname.includes("box")) {
+                        this.visible = false;
+                    }
+                }
+            },
+            created() {
+                window.addEventListener('click', this.handleClick);
+            },
+            destroyed() {
+                window.removeEventListener('click', this.handleClick);
+            },
+        })
+
     </script>
+
+
 
 </body>
 

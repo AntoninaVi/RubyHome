@@ -99,12 +99,6 @@ body {
   background-color: #30aaf5;
 }
 
-.main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 6.2em;
-}
 .main__content-text {
   max-width: 34.8em;
   margin-right: 6.5em;
@@ -123,20 +117,16 @@ body {
   font-size: 18px;
   line-height: 27px;
 }
+.main__picture {
+  position: relative;
+  left: 40em;
+  bottom: 20em;
+}
 .main__picture-img {
   max-width: 30.2em;
   width: 100%;
   max-height: 38.4em;
   border-radius: 10px;
-}
-.main__search-tabs {
-  position: relative;
-  right: 70em;
-  top: 20em;
-}
-.main__search-dropdown {
-  position: relative;
-  display: inline-block;
 }
 .main__search-dropdown-btn {
   background-color: #3498db;
@@ -576,4 +566,163 @@ body {
 }
 .footer__group-link:last-child {
   margin-bottom: 0;
+}
+
+.tabs__group-tab [type=radio] {
+  display: none;
+}
+
+[type=radio]:checked ~ label {
+  background: #e5ddf0;
+  z-index: 2;
+}
+
+[type=radio]:checked ~ label ~ .tabs__group-tab-content {
+  z-index: 1;
+  /* show/hide */
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+/* BREAKPOINTS ----- */
+@media screen and (max-width: 767px) {
+  .tabs {
+    min-height: 400px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .tabs {
+    min-height: 580px;
+  }
+
+  .tabs__group-tab label {
+    height: 60px;
+  }
+
+  .tabs__group-tab-content {
+    top: 60px;
+  }
+}
+.tabs__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  bottom: 35em;
+  min-height: 11.3em;
+  width: 52.6em;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+.tabs__group-tab {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.tabs__group-tab-content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* clear the tab labels */
+  top: 40px;
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
+  background: #afaeb1;
+  -webkit-transition: opacity 0.8s ease, -webkit-transform 0.8s ease;
+  transition: opacity 0.8s ease, -webkit-transform 0.8s ease;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity 0.8s ease, transform 0.8s ease, -webkit-transform 0.8s ease;
+  /* show/hide */
+  opacity: 0;
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  width: 100%;
+  max-width: 52.6em;
+}
+
+.tabs__group-tab label {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* tab content must clear this */
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  background: #e8e6eb;
+  cursor: pointer;
+  -webkit-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+}
+
+.tabs__group-tab label:hover {
+  background: #f1eff3;
+}
+
+.aselect {
+  width: 280px;
+  margin: 20px auto;
+}
+.aselect .selector {
+  border: 1px solid gainsboro;
+  background: #f8f8f8;
+  position: relative;
+  z-index: 1;
+}
+.aselect .selector .arrow {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 10px solid #888;
+  -webkit-transform: rotateZ(0deg) translateY(0px);
+          transform: rotateZ(0deg) translateY(0px);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.59, 1.39, 0.37, 1.01);
+          transition-timing-function: cubic-bezier(0.59, 1.39, 0.37, 1.01);
+}
+.aselect .selector .expanded {
+  -webkit-transform: rotateZ(180deg) translateY(2px);
+          transform: rotateZ(180deg) translateY(2px);
+}
+.aselect .selector .label {
+  display: block;
+  padding: 12px;
+  font-size: 16px;
+  color: #888;
+}
+.aselect ul {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  border: 1px solid gainsboro;
+  position: absolute;
+  z-index: 1;
+  background: #fff;
+}
+.aselect li {
+  padding: 12px;
+  color: #666;
+}
+.aselect li:hover {
+  color: white;
+  background: seagreen;
+}
+.aselect .current {
+  background: #eaeaea;
+}
+.aselect .hidden {
+  visibility: hidden;
+}
+.aselect .visible {
+  visibility: visible;
 }

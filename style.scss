@@ -203,7 +203,30 @@ body {
 		max-width: 22.6em;
 		margin-bottom: 1.8em;
 	}
-
+	&__content-name {
+		display: flex;
+	}
+	&__content-heart {
+		margin-left: 3em;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border: none;
+		z-index: 1;
+		cursor: pointer;
+	
+		&::before {
+			content: "";
+			background-image: url(img/heart.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 15px;
+			height: 13px;
+			z-index: 5;
+			overflow: hidden;
+			
+		}
+	}
 	&__content-article-title {
 		margin-bottom: 0.6em;
 	}

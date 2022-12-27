@@ -736,6 +736,7 @@ body {
   line-height: 33px;
   color: #030a1b;
   padding-top: 0.3em;
+  cursor: pointer;
 }
 .aselect ul {
   width: 100%;

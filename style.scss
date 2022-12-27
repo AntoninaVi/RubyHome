@@ -617,9 +617,6 @@ body {
 			top: 40%;
 			width: 0;
 			height: 0;
-			// transform: rotateZ(0deg) translateY(0px);
-			// transition-duration: 0.3s;
-			// transition-timing-function: cubic-bezier(0.59, 1.39, 0.37, 1.01);
 		}
 		.expanded {
 			// transform: rotateZ(180deg) translateY(2px);
@@ -627,6 +624,7 @@ body {
 		.box {
 			@include dropdown;
 			padding-top: 0.3em;
+			cursor: pointer;
 		}
 	}
 

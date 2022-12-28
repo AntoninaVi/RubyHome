@@ -15,7 +15,7 @@
 
 
     <!-- SLIDER -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+    <link rel="stylesheet" href="glider.min.css">
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 
     <!-- TABS
@@ -42,6 +42,21 @@
                         <a href="#" class="navigation__items-item">Blog</a>
                         <a href="#" class="navigation__items-item">Contact us</a>
                     </div>
+
+                    <div class="burger-menu">
+                        <input id="menu__toggle" type="checkbox" />
+                        <label class="menu__btn" for="menu__toggle">
+                            <span></span>
+                        </label>
+                        <div class="menu__box">
+                            <a href="#" class="navigation__items-item">Home</a>
+                            <a href="#" class="navigation__items-item">Properties</a>
+                            <a href="#" class="navigation__items-item">About us</a>
+                            <a href="#" class="navigation__items-item">Blog</a>
+                            <a href="#" class="navigation__items-item">Contact us</a>
+                        </div>
+                    </div>
+
                 </nav>
             </header>
             <main class="main">
@@ -50,9 +65,9 @@
                     <p class="main__content-description">Buying a home is a life-changing experience, so shouldn’t your
                         real estate agent be a life changer.</p>
                 </div>
-                <div class="main__picture">
-                    <img src="img/main-img.png" alt="building" class="main__picture-img">
-                </div>
+                <!-- <div class="main__picture"> -->
+                <img src="img/main-img.png" alt="building" class="main__picture-img">
+                <!-- </div> -->
                 <div class="main__search">
                     <div class="main__search-tabs">
                         <div class="tabs__group">
@@ -620,7 +635,7 @@
                                     <h3 class="reviews__slider-card-text-title">Justin Lee</h3>
                                     <p class="reviews__slider-card-text-description">Products Designer at Ito</p>
                                 </div>
-                                <img src="img/left-quote.svg" alt="quote">
+                                <img class="reviews__slider-card-quote" src="img/left-quote.svg" alt="quote">
                             </div>
                             <p class="reviews__slider-card-content-description">A good real estate agent doesn’t
                                 disappear
@@ -636,7 +651,7 @@
                                     <h3 class="reviews__slider-card-text-title">Justin Lee</h3>
                                     <p class="reviews__slider-card-text-description">Products Designer at Ito</p>
                                 </div>
-                                <img src="img/left-quote.svg" alt="quote">
+                                <img class="reviews__slider-card-quote" src="img/left-quote.svg" alt="quote">
                             </div>
                             <p class="reviews__slider-card-content-description">A good real estate agent doesn’t
                                 disappear
@@ -651,7 +666,7 @@
                                     <h3 class="reviews__slider-card-text-title">Angel Cathe</h3>
                                     <p class="reviews__slider-card-text-description">Products Designer at Ito</p>
                                 </div>
-                                <img src="img/left-quote.svg" alt="quote">
+                                <img class="reviews__slider-card-quote" src="img/left-quote.svg" alt="quote">
                             </div>
                             <p class="reviews__slider-card-content-description">A good real estate agent doesn’t
                                 disappear
@@ -666,7 +681,7 @@
                                     <h3 class="reviews__slider-card-text-title">Angel Cathe</h3>
                                     <p class="reviews__slider-card-text-description">Products Designer at Ito</p>
                                 </div>
-                                <img src="img/left-quote.svg" alt="quote">
+                                <img class="reviews__slider-card-quote" src="img/left-quote.svg" alt="quote">
                             </div>
                             <p class="reviews__slider-card-content-description">A good real estate agent doesn’t
                                 disappear
@@ -747,13 +762,34 @@
 
 
     <script>
-        new Glider(document.getElementById('glider'), {
+        new Glider(document.getElementById("glider"), {
             slidesToShow: 2,
             slidesToScroll: 1,
-            dots: '.dots',
             draggable: true,
+            dots: ".dots",
+            responsive: [
+                {
 
+                    breakpoint: 1050,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        duration: 0.5
+                    }
+                },
+                {
+
+                    breakpoint: 500,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        duration: 0.5
+                    }
+                }
+            ]
         });
+
+
 
 
         // Dropdowns Buy

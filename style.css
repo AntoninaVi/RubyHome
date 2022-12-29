@@ -40,7 +40,7 @@
 }
 @media screen and (max-width: 320px) {
   .title {
-    font-size: 17px;
+    font-size: 18px;
     text-align: left;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -294,7 +294,7 @@ body {
 }
 @media screen and (max-width: 320px) {
   .partners__title {
-    font-size: 17px;
+    font-size: 18px;
     text-align: left;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -409,6 +409,8 @@ body {
   right: 30px;
   max-height: 20em;
   max-width: 22.6em;
+  width: 120%;
+  height: 100%;
   margin-bottom: 1.8em;
 }
 .properties__content-name {

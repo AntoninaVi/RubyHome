@@ -19,6 +19,7 @@
   position: relative;
   left: 0.7em;
   top: 0.1em;
+  z-index: 1;
 }
 @media screen and (max-width: 640px) {
   .title {
@@ -146,11 +147,6 @@ body {
             transform: scale(0.9);
   }
 }
-@media screen and (max-width: 950px) {
-  .main {
-    margin-bottom: -16em;
-  }
-}
 .main__content-text {
   position: relative;
   max-width: 34.8em;
@@ -259,6 +255,7 @@ body {
   position: relative;
   left: 0.7em;
   top: 0.1em;
+  z-index: 1;
 }
 @media screen and (max-width: 640px) {
   .partners__title {
@@ -991,14 +988,20 @@ body {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
     max-width: 155%;
-    bottom: 20em;
+    bottom: 17em;
     left: -6em;
   }
 }
 @media screen and (max-width: 360px) {
   .tabs__group {
-    max-width: 170%;
-    left: -6.8em;
+    max-width: 175%;
+    left: -6.7em;
+  }
+}
+@media screen and (max-width: 320px) {
+  .tabs__group {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
   }
 }
 .tabs__group-tab {
@@ -1053,6 +1056,12 @@ body {
   .tabs__group-tab-content-dropdowns {
     -ms-grid-columns: 20% 30% 29% 24%;
     grid-template-columns: 20% 30% 29% 24%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .tabs__group-tab-content-dropdowns {
+    -ms-grid-columns: 15% 33% 30% 27%;
+    grid-template-columns: 15% 33% 30% 27%;
   }
 }
 .tabs__group-tab-content-dropdowns-btn {
@@ -1246,7 +1255,7 @@ body {
   margin: 0;
   font-size: 16px;
   position: absolute;
-  z-index: 1;
+  z-index: 6;
   background: #fff;
   border-radius: 5px;
   cursor: pointer;

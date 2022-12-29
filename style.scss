@@ -44,6 +44,7 @@
 	line-height: 66px;
 	color: #030a1b;
 	text-align: center;
+	
 	&::before {
 		content: url(img/house-logo.svg);
 		width: 3em;
@@ -51,6 +52,7 @@
 		position: relative;
 		left: 0.7em;
 		top: 0.1em;
+		z-index: 1;
 	}
 	@media screen and(max-width:640px) {
 		font-size: 25px;
@@ -158,9 +160,9 @@ body {
 	@media screen and (max-width: 1100px) {
 		transform: scale(0.9);
 	}
-	@media screen and (max-width: 950px) {
-		margin-bottom: -16em;
-	}
+	// @media screen and (max-width: 950px) {
+		
+	// }
 	&__content-text {
 		position: relative;
 		max-width: 34.8em;
@@ -241,6 +243,7 @@ body {
 
 .partners {
 	margin-bottom: 8.7em;
+	
 	@media screen and (max-width: 600px) {
 		transform: scale(0.8);
 		margin-bottom:0;
@@ -741,12 +744,15 @@ body {
 		@media screen and (max-width: 410px) {
 			transform: scale(0.7);
 			max-width: 155%;
-			bottom: 20em;
+			bottom: 17em;
 			left: -6em;
 		}
 		@media screen and (max-width: 360px) {
-			max-width: 170%;
-			left: -6.8em;
+			max-width: 175%;
+			left: -6.7em;
+		}
+		@media screen and (max-width: 320px) {
+			transform: scale(0.7);
 		}
 	}
 
@@ -786,7 +792,9 @@ body {
 		@media screen and (max-width: 360px) {
 			grid-template-columns: 20% 30% 29% 24%;
 		}
-		
+		@media screen and (max-width: 320px){
+			grid-template-columns: 15% 33% 30% 27%;
+		}
 	}
 	&__group-tab-content-dropdowns-btn {
 		@include button;
@@ -927,7 +935,7 @@ body {
 		margin: 0;
 		font-size: 16px;
 		position: absolute;
-		z-index: 1;
+		z-index: 6;
 		background: #fff;
 		border-radius: 5px;
 		cursor: pointer;

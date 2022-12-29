@@ -44,11 +44,12 @@
 	line-height: 66px;
 	color: #030a1b;
 	text-align: center;
-	
+	white-space: pre-wrap;
+
 	&::before {
 		content: url(img/house-logo.svg);
-		width: 3em;
-		height: 3em;
+		max-width: 3em;
+		max-height: 3em;
 		position: relative;
 		left: 0.7em;
 		top: 0.1em;
@@ -60,6 +61,9 @@
 	}
 	@media screen and (max-width: 400px) {
 		font-size: 20px;
+	}
+	@media screen and (max-width: 320px) {
+		font-size: 17px;
 	}
 }
 @mixin description {
@@ -161,7 +165,7 @@ body {
 		transform: scale(0.9);
 	}
 	// @media screen and (max-width: 950px) {
-		
+
 	// }
 	&__content-text {
 		position: relative;
@@ -243,10 +247,10 @@ body {
 
 .partners {
 	margin-bottom: 8.7em;
-	
+
 	@media screen and (max-width: 600px) {
 		transform: scale(0.8);
-		margin-bottom:0;
+		margin-bottom: 0;
 	}
 	&__title {
 		@include title;
@@ -479,9 +483,6 @@ body {
 }
 .reviews {
 	margin-bottom: 8.7em;
-	// @media screen and (max-width: 1060px) {
-	// 	transform: scale(0.9);
-	// }
 
 	&__title {
 		margin-bottom: 4rem;
@@ -497,15 +498,16 @@ body {
 
 	&__slider-card {
 		max-width: 34.8em;
+		width: 100%;
 		max-height: 16.2rem;
 		padding: 1.8em 1.8em;
 		background: #ffffff;
 		border: 2px solid rgba(254, 117, 63, 0.1);
 		border-radius: 10px;
 		margin-right: 1.8em;
-		overflow: auto;
-		// @media screen and (max-width: 650px) {
-		// 	// transform: scale(0.8);
+		overflow-x: hidden;
+		// @media screen and (max-width: 530px) {
+		// 	transform: scale(0.8);
 		// 	width: 150%;
 		// }
 	}
@@ -517,6 +519,12 @@ body {
 		@media screen and (max-width: 1050px) {
 			justify-content: flex-start;
 			transform: scale(0.9);
+		}
+		@media screen and (max-width: 530px) {
+			transform: scale(0.7);
+			width: 120%;
+			justify-items: left;
+			
 		}
 	}
 
@@ -741,18 +749,20 @@ body {
 		@media screen and (max-width: 480px) {
 			left: -5.5em;
 		}
-		@media screen and (max-width: 410px) {
+		@media screen and (max-width: 414px) {
 			transform: scale(0.7);
 			max-width: 155%;
 			bottom: 17em;
 			left: -6em;
 		}
 		@media screen and (max-width: 360px) {
-			max-width: 175%;
-			left: -6.7em;
+			max-width: 170%;
+			left: -7.2em;
 		}
 		@media screen and (max-width: 320px) {
 			transform: scale(0.7);
+			max-width: 170%;
+			left: -6.4em;
 		}
 	}
 
@@ -792,7 +802,7 @@ body {
 		@media screen and (max-width: 360px) {
 			grid-template-columns: 20% 30% 29% 24%;
 		}
-		@media screen and (max-width: 320px){
+		@media screen and (max-width: 320px) {
 			grid-template-columns: 15% 33% 30% 27%;
 		}
 	}
@@ -804,6 +814,9 @@ body {
 		&:before {
 			content: url(img/search-icon.svg);
 			margin-right: 0.6em;
+		}
+		@media screen and (max-width: 320px){
+			transform: scale(0.6);
 		}
 	}
 	&__group-tab-content-dropdowns-title {

@@ -11,11 +11,12 @@
   line-height: 66px;
   color: #030a1b;
   text-align: center;
+  white-space: pre-wrap;
 }
 .title::before {
   content: url(img/house-logo.svg);
-  width: 3em;
-  height: 3em;
+  max-width: 3em;
+  max-height: 3em;
   position: relative;
   left: 0.7em;
   top: 0.1em;
@@ -30,6 +31,11 @@
 @media screen and (max-width: 400px) {
   .title {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .title {
+    font-size: 17px;
   }
 }
 
@@ -246,12 +252,13 @@ body {
   line-height: 66px;
   color: #030a1b;
   text-align: center;
+  white-space: pre-wrap;
   margin-bottom: 4em;
 }
 .partners__title::before {
   content: url(img/house-logo.svg);
-  width: 3em;
-  height: 3em;
+  max-width: 3em;
+  max-height: 3em;
   position: relative;
   left: 0.7em;
   top: 0.1em;
@@ -266,6 +273,11 @@ body {
 @media screen and (max-width: 400px) {
   .partners__title {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .partners__title {
+    font-size: 17px;
   }
 }
 @media screen and (max-width: 950px) {
@@ -621,13 +633,14 @@ body {
 }
 .reviews__slider-card {
   max-width: 34.8em;
+  width: 100%;
   max-height: 16.2rem;
   padding: 1.8em 1.8em;
   background: #ffffff;
   border: 2px solid rgba(254, 117, 63, 0.1);
   border-radius: 10px;
   margin-right: 1.8em;
-  overflow: auto;
+  overflow-x: hidden;
 }
 .reviews__slider-card-content {
   display: -webkit-box;
@@ -647,6 +660,14 @@ body {
             justify-content: flex-start;
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
+  }
+}
+@media screen and (max-width: 530px) {
+  .reviews__slider-card-content {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    width: 120%;
+    justify-items: left;
   }
 }
 .reviews__slider-card-img {
@@ -983,7 +1004,7 @@ body {
     left: -5.5em;
   }
 }
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 414px) {
   .tabs__group {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
@@ -994,14 +1015,16 @@ body {
 }
 @media screen and (max-width: 360px) {
   .tabs__group {
-    max-width: 175%;
-    left: -6.7em;
+    max-width: 170%;
+    left: -7.2em;
   }
 }
 @media screen and (max-width: 320px) {
   .tabs__group {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
+    max-width: 170%;
+    left: -6.4em;
   }
 }
 .tabs__group-tab {
@@ -1094,6 +1117,12 @@ body {
 .tabs__group-tab-content-dropdowns-btn:before {
   content: url(img/search-icon.svg);
   margin-right: 0.6em;
+}
+@media screen and (max-width: 320px) {
+  .tabs__group-tab-content-dropdowns-btn {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
 }
 .tabs__group-tab-content-dropdowns-title {
   text-align: left;

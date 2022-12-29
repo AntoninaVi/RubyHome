@@ -47,12 +47,12 @@
     user-select: none;
     justify-content: center;
     align-content: center;
-   
-    width: 34.8em;
+    max-width: 34.8em;
+    width: 150%;
 }
-.glider-slide img {
+/* .glider-slide img {
     max-width: 100%;
-}
+} */
 .glider::-webkit-scrollbar {
     opacity: 0;
     height: 0;

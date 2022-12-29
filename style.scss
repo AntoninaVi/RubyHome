@@ -21,6 +21,9 @@
 		transition: ease-in-out 0.3s;
 		background-color: #30aaf5;
 	}
+	@media screen and (max-width: 730px) {
+		transform: scale(0.7);
+	}
 }
 @mixin links {
 	font-weight: 500;
@@ -48,6 +51,10 @@
 		position: relative;
 		left: 0.7em;
 		top: 0.1em;
+	}
+	@media screen and(max-width:640px) {
+		font-size: 34px;
+		line-height: 46px;
 	}
 }
 @mixin description {
@@ -166,6 +173,10 @@ body {
 		@media screen and (max-width: 1000px) {
 			font-size: 3em;
 		}
+		@media screen and(max-width:640px) {
+			font-size: 2em;
+			line-height: 40px;
+		}
 	}
 
 	&__content-description {
@@ -198,10 +209,15 @@ body {
 		}
 		@media screen and (max-width: 920px) {
 			left: 24em;
-			opacity: 0.7;
+			opacity: 0.6;
 		}
 		@media screen and (max-width: 790px) {
 			left: 16em;
+		}
+		@media screen and(max-width:640px) {
+			width: 80%;
+			left: 5%;
+			bottom: 30vh;
 		}
 	}
 }
@@ -241,6 +257,9 @@ body {
 }
 .properties {
 	margin-bottom: 8.7em;
+	@media screen and (max-width: 800px) {
+		margin-bottom: 2em;
+	}
 
 	&__headline {
 		display: flex;
@@ -348,7 +367,7 @@ body {
 		margin-left: auto;
 		margin-bottom: 4.3em;
 		@media screen and (max-width: 700px) {
-			margin-bottom: 2em;
+			margin-bottom: 0;
 		}
 	}
 
@@ -447,6 +466,10 @@ body {
 		border-radius: 10px;
 		margin-right: 1.8em;
 		overflow: auto;
+		// @media screen and (max-width: 650px) {
+		// 	// transform: scale(0.8);
+		// 	width: 150%;
+		// }
 	}
 
 	&__slider-card-content {
@@ -505,6 +528,9 @@ body {
 	text-align: center;
 	padding: 4.3em 0 2.3em 0;
 	margin-bottom: 8.7em;
+	@media screen and (max-width: 768px) {
+		transform: scale(0.9);
+	}
 
 	&__title {
 		font-weight: 500;
@@ -513,6 +539,12 @@ body {
 		text-align: center;
 		color: #ffffff;
 		margin-bottom: 0.9em;
+		@media screen and (max-width: 768px) {
+			font-size: 30px;
+			line-height: 40px;
+			white-space: pre-line;
+			padding: 0.5em;
+		}
 	}
 
 	&__description {
@@ -523,6 +555,9 @@ body {
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 4.3em;
+		@media screen and (max-width: 550px) {
+			width: 70%;
+		}
 	}
 
 	&__form {
@@ -531,7 +566,10 @@ body {
 		max-width: 46.4em;
 		width: 100%;
 		@media screen and (max-width: 870px) {
-			width: 60%;
+			width: 70%;
+		}
+		@media screen and (max-width: 330px) {
+			width: 90%;
 		}
 	}
 
@@ -541,10 +579,9 @@ body {
 		padding: 1.4em 1.8em;
 		border-radius: 10px;
 		border: none;
-		// @media screen and (max-width: 830px) {
-		// 	width: 75%;
-
-		// }
+		@media screen and (max-width: 550px) {
+			font-size: 15px;
+		}
 	}
 
 	&__form-button {
@@ -553,7 +590,10 @@ body {
 		bottom: 3.6em;
 		left: 18.5em;
 		@media screen and (max-width: 870px) {
-		left: 8em;
+			left: 33%;
+		}
+		@media screen and (max-width: 460px) {
+			position: inherit;
 		}
 	}
 }
@@ -565,7 +605,7 @@ body {
 		flex-wrap: wrap;
 	}
 	@media screen and (max-width: 650px) {
-	transform: scale(0.9);
+		transform: scale(0.9);
 	}
 
 	&__group {
@@ -634,13 +674,20 @@ body {
 			bottom: 27em;
 			left: 2em;
 		}
-		@media screen and (max-width: 780px) {
-			width: 52em;
-			max-width: 118%;
-			left: -3.5em;
-			bottom: 20em;
+		@media screen and (max-width: 740px) {
+			left: -2em;
+			bottom: 23em;
+			width: 50em;
+			max-width: 112%;
 		}
-		@media screen and (max-width: 680px) {
+		@media screen and (max-width: 640px) {
+			max-width: 145%;
+			transform: scale(0.8);
+			left: -6.5em;
+		}
+		@media screen and (max-width: 480px){
+			max-width: 140%;
+			left: -5.5em;
 		}
 	}
 
@@ -663,13 +710,18 @@ body {
 		transform-origin: top left;
 		width: 100%;
 		max-width: 52.6em;
-		@media screen and (max-width: 800px) {
-		}
+		
 	}
 	&__group-tab-content-dropdowns {
 		display: grid;
-		grid-template-columns: 23% 28% 31% 18%;
+		grid-template-columns: 25% 29% 29% 18%;
 		align-items: center;
+		@media screen and(max-width:640px) {
+			grid-template-columns: 25% 30% 26% 22%;
+		}
+		@media screen and (max-width: 500px){
+			
+		}
 	}
 	&__group-tab-content-dropdowns-btn {
 		@include button;
@@ -695,6 +747,9 @@ body {
 		}
 		@media screen and (max-width: 665px) {
 			transform: scale(0.9);
+		}
+		@media screen and (max-width: 500px){
+			transform: scale(0.8);
 		}
 	}
 	&__group-tab-content-dropdown {

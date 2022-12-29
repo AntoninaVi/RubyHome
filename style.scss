@@ -53,8 +53,11 @@
 		top: 0.1em;
 	}
 	@media screen and(max-width:640px) {
-		font-size: 34px;
-		line-height: 46px;
+		font-size: 25px;
+		line-height: 34px;
+	}
+	@media screen and (max-width: 400px){
+		font-size: 20px;
 	}
 }
 @mixin description {
@@ -99,11 +102,13 @@ body {
 	font-style: normal;
 	font-size: 16px;
 	color: #030a1b;
+	overflow-x: hidden;
 }
 
 .wrapper {
 	background-color: #e5e5e5;
 	width: 100%;
+	overflow: hidden;
 
 	// padding-right: 0.5em;
 	// padding-left: 0.5em;
@@ -128,6 +133,11 @@ body {
 	justify-content: space-between;
 	margin-bottom: 4.3em;
 
+	&__logotype-img {
+		@media screen and (max-width: 460px) {
+			width: 70%;
+		}
+	}
 	&__items-item {
 		@include links;
 		margin-right: 3.1em;
@@ -163,6 +173,9 @@ body {
 		}
 		@media screen and (max-width: 920px) {
 			width: 100%;
+		}
+		@media screen and (max-width: 410px) {
+			top: -4.5em;
 		}
 	}
 
@@ -260,12 +273,18 @@ body {
 	@media screen and (max-width: 800px) {
 		margin-bottom: 2em;
 	}
+	@media screen and (max-width: 390px) {
+		margin-bottom: -15em;
+	}
 
 	&__headline {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 4em;
+		@media screen and (max-width: 390px) {
+			margin-bottom: -7em;
+		}
 	}
 
 	&__content {
@@ -273,6 +292,10 @@ body {
 		grid-template-columns: repeat(auto-fit, minmax(22.6em, 1fr));
 		gap: 1.8em;
 		justify-items: center;
+		@media screen and (max-width: 390px) {
+			justify-content: center;
+			transform: scale(0.9);
+		}
 	}
 
 	&__content-article {
@@ -282,6 +305,9 @@ body {
 		box-shadow: 0px 8px 70px rgba(0, 0, 0, 0.07);
 		border-radius: 10px;
 		padding: 0 30px 30px 30px;
+		@media screen and (max-width: 390px) {
+			transform: scale(0.8);
+		}
 	}
 
 	&__content-article-img {
@@ -387,6 +413,10 @@ body {
 			grid-template-columns: 61%;
 			justify-content: center;
 		}
+		@media screen and (max-width: 600px) {
+			grid-template-columns: 100%;
+			justify-items: center;
+		}
 	}
 
 	&__content-group-item {
@@ -435,6 +465,7 @@ body {
 	}
 
 	&__content-picture-img {
+		width: 100%;
 		max-width: 22.6em;
 		height: 33em;
 	}
@@ -531,6 +562,9 @@ body {
 	@media screen and (max-width: 768px) {
 		transform: scale(0.9);
 	}
+	@media screen and (max-width: 650px) {
+		margin-bottom: 2em;
+	}
 
 	&__title {
 		font-weight: 500;
@@ -611,20 +645,32 @@ body {
 	&__group {
 		display: flex;
 		flex-direction: column;
+		@media screen and (max-width: 650px) {
+			transform: scale(0.9);
+		}
 	}
 
 	&__description {
 		@include description;
 		max-width: 16.4em;
 		margin-bottom: 1.5em;
+		@media screen and (max-width: 650px) {
+			transform: scale(0.8);
+		}
 	}
 	&__group-logotype {
 		max-width: 13.7em;
 		width: 100%;
+		@media screen and (max-width: 650px) {
+			transform: scale(0.8);
+		}
 	}
 
 	&__group-socials {
 		display: flex;
+		@media screen and (max-width: 650px) {
+				transform: scale(0.8);
+			}
 	}
 
 	&__group-socials-item {
@@ -681,14 +727,23 @@ body {
 			max-width: 112%;
 		}
 		@media screen and (max-width: 640px) {
-			max-width: 145%;
+			max-width: 143%;
 			transform: scale(0.8);
 			left: -6.5em;
 		}
-		@media screen and (max-width: 480px){
-			max-width: 140%;
+		@media screen and (max-width: 480px) {
 			left: -5.5em;
 		}
+		@media screen and (max-width: 410px) {
+			transform: scale(0.7);
+			max-width: 155%;
+			bottom: 20em;
+			left: -6em;
+		}
+		@media screen and (max-width: 360px){
+			max-width: 167%;
+			left: -6.7em;
+		} 
 	}
 
 	&__group-tab {
@@ -710,7 +765,9 @@ body {
 		transform-origin: top left;
 		width: 100%;
 		max-width: 52.6em;
-		
+		@media screen and (max-width: 500px) {
+			padding: 0.5em 1em 0.5em 0.5em;
+		}
 	}
 	&__group-tab-content-dropdowns {
 		display: grid;
@@ -719,8 +776,8 @@ body {
 		@media screen and(max-width:640px) {
 			grid-template-columns: 25% 30% 26% 22%;
 		}
-		@media screen and (max-width: 500px){
-			
+		@media screen and (max-width: 440px) {
+			grid-template-columns: 20% 29% 29% 24%;
 		}
 	}
 	&__group-tab-content-dropdowns-btn {
@@ -741,6 +798,7 @@ body {
 		line-height: 24px;
 		color: #030a1b;
 		opacity: 0.7;
+		white-space: nowrap;
 		&::after {
 			content: url(img/arrow-bottom.svg);
 			margin-left: 0.6em;
@@ -748,7 +806,7 @@ body {
 		@media screen and (max-width: 665px) {
 			transform: scale(0.9);
 		}
-		@media screen and (max-width: 500px){
+		@media screen and (max-width: 500px) {
 			transform: scale(0.8);
 		}
 	}
@@ -757,10 +815,17 @@ body {
 			padding-bottom: -20px;
 			padding-left: 20px;
 			border-left: 1px solid #030a1b;
+			@media screen and (max-width: 500px) {
+				border: none;
+			}
+			
 		}
 		&:nth-child(2) {
 			border-right: 1px solid #030a1b;
 			padding-left: 2em;
+			@media screen and (max-width: 500px) {
+				border: none;
+			}
 		}
 		&:nth-child(3) {
 			padding-left: 1em;
@@ -798,6 +863,7 @@ body {
 	z-index: 1;
 	opacity: 1;
 	transform: scale(1);
+	
 }
 
 @media screen and (max-width: 767px) {
@@ -842,6 +908,9 @@ body {
 			@include dropdown;
 			padding-top: 0.3em;
 			cursor: pointer;
+			@media screen and (max-width: 370px){
+				transform: scale(0.9);
+			}
 		}
 	}
 
@@ -856,6 +925,10 @@ body {
 		background: #fff;
 		border-radius: 5px;
 		cursor: pointer;
+		@media screen and (max-width: 370px){
+			transform: scale(0.9);
+			font-size: 15px;
+		}
 	}
 	li {
 		@include dropdown;
@@ -902,8 +975,9 @@ body {
 	.menu__btn {
 	}
 }
-@media all and (max-width: 400px) {
+@media all and (max-width: 460px) {
 	.menu__btn {
+		left: -54%;
 	}
 }
 .menu__btn span,
@@ -929,18 +1003,31 @@ body {
 .menu__box {
 	display: block;
 	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	top: 2em;
+	right: 2em;
 	overflow: hidden;
 	visibility: hidden;
 	padding-top: 30px;
-	top: 2em;
 	width: 80%;
 	max-width: 25em;
 	max-height: 33em;
-	height: 100%;
+	height: 50%;
 	background: #ffffff;
 	border-radius: 20px;
 	text-align: center;
 	z-index: 3;
+
+	&-item{
+		@include links;
+		&:last-child{
+			@include button;
+		}
+	}
+	
 }
 .menu__item {
 	display: block;
@@ -976,5 +1063,4 @@ body {
 }
 #menu__toggle:checked ~ .menu__box {
 	visibility: visible;
-	right: 5em;
 }

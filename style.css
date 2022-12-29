@@ -997,8 +997,8 @@ body {
 }
 @media screen and (max-width: 360px) {
   .tabs__group {
-    max-width: 167%;
-    left: -6.7em;
+    max-width: 170%;
+    left: -6.8em;
   }
 }
 .tabs__group-tab {
@@ -1047,6 +1047,12 @@ body {
   .tabs__group-tab-content-dropdowns {
     -ms-grid-columns: 20% 29% 29% 24%;
     grid-template-columns: 20% 29% 29% 24%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .tabs__group-tab-content-dropdowns {
+    -ms-grid-columns: 20% 30% 29% 24%;
+    grid-template-columns: 20% 30% 29% 24%;
   }
 }
 .tabs__group-tab-content-dropdowns-btn {

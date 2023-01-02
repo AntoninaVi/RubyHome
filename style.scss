@@ -55,8 +55,8 @@
 		left: 0.7em;
 		top: 0.1em;
 		z-index: 1;
-		@media screen and (max-width: 320px){
-		top: -0.2em;
+		@media screen and (max-width: 320px) {
+			top: -0.2em;
 		}
 	}
 	@media screen and(max-width:640px) {
@@ -79,12 +79,20 @@
 	line-height: 24px;
 	color: #030a1b;
 	opacity: 0.7;
+	@media screen and (max-width: 490px) {
+		font-size: 15px;
+		line-height: 19px;
+	}
 }
 @mixin title-articles {
 	font-style: normal;
 	font-weight: 600;
 	font-size: 22px;
 	line-height: 33px;
+	@media screen and (max-width: 390px) {
+		font-size: 17px;
+		line-height: 18px;
+	}
 }
 @mixin dropdown {
 	font-family: "Poppins";
@@ -171,7 +179,7 @@ body {
 	@media screen and (max-width: 1100px) {
 		transform: scale(0.9);
 	}
-	
+
 	&__content-text {
 		position: relative;
 		max-width: 34.8em;
@@ -209,8 +217,6 @@ body {
 		line-height: 27px;
 	}
 
-
-
 	&__picture-img {
 		position: relative;
 		left: 41.6em;
@@ -238,8 +244,6 @@ body {
 		}
 	}
 }
-
-
 
 .partners {
 	margin-bottom: 8.7em;
@@ -360,7 +364,6 @@ body {
 	&__content-article-facilities-item {
 		display: flex;
 		align-items: center;
-		
 	}
 	&__content-article-facilities-number {
 		font-weight: 400;
@@ -506,8 +509,11 @@ body {
 		border: 2px solid rgba(254, 117, 63, 0.1);
 		border-radius: 10px;
 		margin-right: 1.8em;
-		overflow-x: hidden;
-		
+		overflow: hidden;
+		@media screen and (max-width: 490px) {
+			padding: 1em 1em;
+			transform: scale(0.9);
+		}
 	}
 
 	&__slider-card-content {
@@ -519,22 +525,32 @@ body {
 			transform: scale(0.9);
 		}
 		@media screen and (max-width: 530px) {
-			transform: scale(0.7);
-			width: 120%;
+			transform: scale(0.8);
+			width: 100%;
 			justify-items: left;
-			
+		}
+		@media screen and (max-width: 370px){
+			transform: scale(0.7);
+			margin-top: -1em;
 		}
 	}
 
 	&__slider-card-img {
 		max-width: 4.6em;
 		margin-right: 1.9rem;
+		@media screen and (max-width: 490px) {
+			margin-right: 0.5em;
+			margin-left: -2em;
+		}
 	}
 
 	&__slider-card-text {
 		margin-right: 7rem;
 		@media screen and (max-width: 1100px) {
 			margin-right: 3rem;
+		}
+		@media screen and (max-width: 490px) {
+			margin-right: 0;
 		}
 	}
 
@@ -553,12 +569,21 @@ body {
 	&__slider-card-content-description {
 		@include description;
 		max-width: 30.5em;
+		@media screen and (max-width: 490px) {
+			width: 100%;
+		}
+		@media screen and (max-width: 320px) {
+			font-size: 13px;
+		}
 	}
 	&__slider-card-quote {
-	
 		max-height: 4em;
 		@media screen and (max-width: 1050px) {
 			transform: scale(0.5);
+		}
+		@media screen and (max-width: 490px) {
+			width: 2.5em;
+			height: 2.5em;
 		}
 	}
 }
@@ -765,12 +790,11 @@ body {
 		}
 		@media screen and (max-width: 280px) {
 			left: -5.8em;
-	}
+		}
 	}
 
 	&__group-tab {
 		border-radius: 5px;
-	
 	}
 	&__group-tab-content {
 		position: absolute;
@@ -815,7 +839,7 @@ body {
 			content: url(img/search-icon.svg);
 			margin-right: 0.6em;
 		}
-		@media screen and (max-width: 320px){
+		@media screen and (max-width: 320px) {
 			transform: scale(0.6);
 		}
 	}
@@ -845,7 +869,6 @@ body {
 			padding-left: 20px;
 			border-left: 1px solid #030a1b;
 			@media screen and (max-width: 500px) {
-			
 				border: none;
 			}
 		}
@@ -853,7 +876,6 @@ body {
 			border-right: 1px solid #030a1b;
 			padding-left: 2em;
 			@media screen and (max-width: 500px) {
-			
 				border: none;
 			}
 		}
@@ -966,7 +988,7 @@ body {
 		@include dropdown;
 		padding: 0.6em;
 		cursor: pointer;
-	
+
 		&:hover {
 			color: #fe753f;
 		}

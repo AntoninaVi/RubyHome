@@ -215,8 +215,8 @@ body {
 }
 @media screen and (max-width: 490px) {
   .main__content-description {
-    font-size: 15px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 .main__picture-img {
@@ -448,8 +448,8 @@ body {
 }
 @media screen and (max-width: 490px) {
   .properties__content-article-description {
-    font-size: 15px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 .properties__content-article-description::before {
@@ -551,8 +551,8 @@ body {
 }
 @media screen and (max-width: 490px) {
   .features__description {
-    font-size: 15px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 @media screen and (max-width: 700px) {
@@ -650,8 +650,8 @@ body {
 }
 @media screen and (max-width: 490px) {
   .features__content-group-item-description {
-    font-size: 15px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 .features__content-picture {
@@ -734,13 +734,14 @@ body {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
     width: 100%;
-    justify-items: left;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30% 71% 11%;
+    grid-template-columns: 30% 71% 11%;
   }
 }
 @media screen and (max-width: 370px) {
   .reviews__slider-card-content {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
     margin-top: -1em;
   }
 }
@@ -792,8 +793,8 @@ body {
 }
 @media screen and (max-width: 490px) {
   .reviews__slider-card-text-description {
-    font-size: 15px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 .reviews__slider-card-content-description {
@@ -806,8 +807,8 @@ body {
 }
 @media screen and (max-width: 490px) {
   .reviews__slider-card-content-description {
-    font-size: 15px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 @media screen and (max-width: 490px) {
@@ -888,8 +889,8 @@ body {
 }
 @media screen and (max-width: 490px) {
   .email__description {
-    font-size: 15px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -1013,8 +1014,8 @@ body {
 }
 @media screen and (max-width: 490px) {
   .footer__description {
-    font-size: 15px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 @media screen and (max-width: 650px) {

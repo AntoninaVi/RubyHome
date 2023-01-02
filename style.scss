@@ -80,8 +80,8 @@
 	color: #030a1b;
 	opacity: 0.7;
 	@media screen and (max-width: 490px) {
-		font-size: 15px;
-		line-height: 19px;
+		font-size: 14px;
+		line-height: 18px;
 	}
 }
 @mixin title-articles {
@@ -527,10 +527,10 @@ body {
 		@media screen and (max-width: 530px) {
 			transform: scale(0.8);
 			width: 100%;
-			justify-items: left;
+			display: grid;
+			grid-template-columns: 30% 71% 11%;
 		}
-		@media screen and (max-width: 370px){
-			transform: scale(0.7);
+		@media screen and (max-width: 370px) {
 			margin-top: -1em;
 		}
 	}
